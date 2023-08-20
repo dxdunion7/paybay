@@ -1,9 +1,8 @@
-from django.db.models.base import Model
-from django.shortcuts import get_object_or_404, redirect, render
+
+from django.shortcuts import redirect, render
 from django.contrib import messages
 from django.contrib.auth.models import auth
-from rest_framework.permissions import IsAuthenticated
-from .models import User, Contact
+from .models import User
     
 def registration(request):
     """Displays the index page."""
