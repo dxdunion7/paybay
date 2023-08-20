@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="con">
+        <nav class="navbar fixed-top con navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'core:dashboard' %}"><img src="{% static 'img/pay.jpeg' %}" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="{% static 'img/menu.png' %}" alt="toggler">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:dashboard' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:portfolio' %}">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:assets' %}">Assets</a>
+                    </li>
+                    
+                </ul>
+                <a href="{% url 'core:deposit' %}"><button class="log">Deposit</button></a>
+                <form action="{% url 'account:logout' %}" class="d-flex button-group" role="search">
+                    <button type="submit" class="logout">Logout</button>
+                    <img src="{% static 'img/grey.svg' %}" alt="">
+                </form>
+               
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog ">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-3" id="staticBackdropLabel">Change Password</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post">
+
+                                <label for="">New Password</label>
+                                <input name="new_password" type="password"> 
+                                <button type="submit">Change Password</button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        <div>
+           <Navbar4/> 
+        </div>
+        
+        
+        <div class="dash">
+            <div style="height:2rem">
+                <center>
+                    {% for message in messages %}
+                    <p style="color: blue">{{message}}</p>
+                    {% endfor %}
+                </center>
+            </div>
+            
+            <div class="father">
+                <div class="dash-leftsidebar">
+                <div class="dash-leftsidebar-header">
+                    <div class="dash-leftsidebar-header-img">
+                        
+                        <div class="dash-leftsidebar-header-text">
+                        <h6>Welcome, {% for dashboard in dashboards %}{{dashboard.user.first_name}} {{dashboard.user.surname}}{% endfor %}!</h6>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="dash-leftsidebar-general">
+                    <div>
+                        <p>General</p>
+                    </div>
+                    <div class="dash-leftsidebar-general-menu">
+                        <p><font-awesome-icon class="icon" :icon="['fa', 'home']" /> Home</p>
+                        <p><font-awesome-icon class="icon" :icon="['fa', 'server']" /> Farms</p>
+                        <p><font-awesome-icon class="icon" :icon="['fa', 'clock']" /> Pools</p>
+                        <p data-bs-toggle="modal" data-bs-target="#staticBackdrop"><font-awesome-icon class="icon" :icon="['fa', 'gear']" /> Change Password</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dash-center">
+               
+                <div>
+                    <client-only>
+                        <Chart/>
+                    </client-only>
+                </div>
+                <div class="movers-card" >
+                <div class="movers-cards" style="background-color: #e1f9f1;">
+                    <p>Bronze</p>
+                    <h6>Minimum investment: $1,000</h6>
+                    <h6>Expected return: $2,000</h6>
+                    <h6>% Change: 100</h6>
+                    <p>Duration: 2 weeks</p>
+                   <a href="{% url 'core:deposit' %}"><button>Invest Now</button></a> 
+                </div>
+                <div class="movers-cards" style="background-color:#F0E68C;">
+                    <p>Silver</p>
+                    <h6>Minimum investment: $5,000</h6>
+                    <h6>Expected return: $10,000</h6>
+                    <h6>% Change: 100</h6>
+                    <p>Duration: 2 weeks</p>
+                   <a href="{% url 'core:deposit' %}"><button>Invest Now</button></a> 
+                </div>
+                <div class="movers-cards" style="background-color:silver;">
+                    <p>Gold</p>
+                    <h6>Minimum investment: $10,000 </h6>
+                    <h6>Expected return: $20,000</h6>
+                    <h6>% Change: 100</h6>
+                    <p>Duration: 2 weeks</p>
+                   <a href="{% url 'core:deposit' %}"><button>Invest Now</button></a> 
+                </div>     
+                <div class="movers-cards" style="background-color:#fdedd4;">
+                    <p  style="color:#000">Premium</p>
+                    <h6 style="color:#000">Minimum investment: $15,000</h6>
+                    <h6 style="color:#000">Expected return: $30,000</h6>
+                    <h6 style="color:#000">% Change: 100</h6>
+                    <p>Duration: 2 weeks</p>
+                    <a href="{% url 'core:deposit' %}"><button>Invest Now</button></a> 
+                </div>
+                
+                
+            </div>
+            </div>
+            <div class="dash-rightsidebar">
+                
+                <div class="dash-rightsidebar-header">
+                    <div class="dash-rightsidebar-header-text">
+                        <p>YOUR BALANCE</p>
+                        <h3>${% for dashboard in dashboards %}{{dashboard.new_amount}} {% endfor%}</h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="dash-rightsidebar-buy">
+                    <div class="dash-rightsidebar-buy-button">
+                        <a href="{% url 'core:deposit' %}"><button>BUY</button></a>
+                    </div>
+                    <div class="dash-rightsidebar-buy-text"  v-for="(crypto , index) in computedCrypto" :key="index">
+                        <p>crypto.asset_id crypto.price_usd</p>
+                    </div>
+                    <div class="dash-rightsidebar-buy-proceed">
+                        <a href="{% url 'core:deposit' %}"><button>Proceed to Buy</button></a>
+                        <a href="{% url 'core:assets' %}"><button>Other Assets</button></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            
+        </div>
+      </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -3,6 +3,7 @@ from django.conf import settings
 from datetime import datetime
 from django.utils import timezone
 from datetime import timedelta
+from account.models import User
 
 
 STATUS = (
@@ -36,20 +37,25 @@ class Commodity(models.Model):
         return self.name
 
 class Dashboard(models.Model):
-    owner = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='dashboards', on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='dashboards', on_delete=models.CASCADE)
     profile_value = models.DecimalField(default=0, max_digits=12, decimal_places=2)
 
     class Meta:
         verbose_name_plural = "User Dashboard"
 
     def __str__(self):
-        return str(self.owner)
+        return str(self.user)
+    
+    def new_amount(self):
+        balance = self.profile_value
+        real_balance = "{:,.2f}".format(balance)
+        return real_balance
 
 class Withdraw(models.Model):
-    owner = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='withdraw', on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='withdraw', on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     account  = models.IntegerField()
-    amount = models.IntegerField()
+    amount = models.DecimalField(default=0, max_digits=50, decimal_places=2)
     swift = models.CharField(max_length=50)
     bank_name = models.CharField(max_length=50)
     bank_address = models.CharField(max_length=50)
@@ -64,23 +70,6 @@ class Withdraw(models.Model):
 
     def __str__(self):
         return str(self.owner)
-
-class Bank(models.Model):
-    name = models.CharField(max_length=100)
-    account  = models.IntegerField()
-    swift = models.CharField(max_length=50)
-    bank_name = models.CharField(max_length=50)
-    bank_address = models.CharField(max_length=50)
-    bank_state = models.CharField(max_length=50)
-    bank_zip_code = models.CharField(max_length=50)
-    bank_country = models.CharField(max_length=50)
-    additional_instructions = models.TextField()
-
-    class Meta:
-        verbose_name_plural = "Client Withdrawal Bank Details"
-
-    def __str__(self):
-        return self.name
 
 class Crypto(models.Model):
     wallet_name = models.CharField(max_length=50)

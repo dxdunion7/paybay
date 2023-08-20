@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <g id="Group_1817" data-name="Group 1817" transform="translate(-928 -762)">
+    <rect id="Rectangle_Copy_5" data-name="Rectangle Copy 5" width="65" height="65" rx="9" transform="translate(928 762)" fill="#f5f5f5"/>
+    <g id="Group" transform="translate(937.938 771.188)">
+      <g id="icon-1_copy_9" data-name="icon-1 copy 9" transform="translate(6.062 7.812)">
+        <path id="Star" d="M3.468,35.365,8.444,20.011l-13.051-9.5,16.14-.012,5-15.346,5,15.346,16.14.012-13.051,9.5,3.556,10.973-2.854.925L21.1,18.866l7.363-5.358L19.353,13.5l-2.82-8.658L13.712,13.5l-9.106.007,7.363,5.358L9.162,27.529l6.49-4.708,1.762,2.428Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

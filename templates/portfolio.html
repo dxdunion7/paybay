@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="con">
+        <nav class="navbar fixed-top con navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'core:dashboard' %}"><img src="{% static 'img/pay.jpeg' %}" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="{% static 'img/menu.png' %}" alt="toggler">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:dashboard' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:portfolio' %}">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:assets' %}">Assets</a>
+                    </li>
+                    
+                </ul>
+                <a href="{% url 'core:deposit' %}"><button class="log">Deposit</button></a>
+                <form action="{% url 'account:logout' %}" class="d-flex button-group" role="search">
+                    <button type="submit" class="logout">Logout</button>
+                    <img src="{% static 'img/grey.svg' %}" alt="">
+                </form>
+               
+                </div>
+            </div>
+        </nav>
+    </div>
+    
+    <div class="dash">
+        <div style="height:2rem">
+          <center>
+            {% for message in messages %}
+            <p style="color: blue">{{message}}</p>
+            {% endfor %}
+        </center>
+        </div>
+        <div class="two-factor">
+            <div class="two-factor-text">
+              <p>Hi {% for dashboard in dashboards %}{{dashboard.user.first_name}} {{dashboard.user.surname}}{% endfor %}, your current portfolio value is</p>
+              <h4>${% for dashboard in dashboards %}{{dashboard.new_amount}} {% endfor%}</h4>
+        
+              <div class="withdraw" v-if="mode">
+                  <form action="{% url 'core:portfolio' %}" method="post">
+                    {% csrf_token %}
+                    <div class="withdraw-cards">
+                      <div>
+                      <label for="">Account Name</label>
+                      <input name="account_name" type="text" required v-model="withdrawalInfo.name">
+                    </div>
+                    <div>
+                      <label for="">Account Number</label>
+                      <input name="account_number" type="number"  required name="" id="" v-model="withdrawalInfo.account">
+                    </div>
+                    <div>
+                      <label for="">Swift</label>
+                      <input name="swift" type="text" required v-model="withdrawalInfo.swift">
+                    </div>
+                    <div>
+                      <label for="">Bank Name</label>
+                      <input name="bank_name" type="text" required name="" id="" v-model="withdrawalInfo.bank_name">
+                    </div>
+                    <div>
+                      <label for="">Bank Address</label>
+                      <input name="bank_address" type="text" required v-model="withdrawalInfo.bank_address">
+                    </div>
+                    <div>
+                      <label for="">Bank State</label>
+                      <input name="bank_state" type="text" required v-model="withdrawalInfo.bank_state">
+                    </div>
+                    <div>
+                      <label for="">Bank Zipcode</label>
+                      <input name="bank_zip_code" type="text" required v-model="withdrawalInfo.bank_zip_code">
+                    </div>
+                    <div>
+                      <label for="">Bank Country</label>
+                      <input name="bank_country" type="text" required v-model="withdrawalInfo.bank_country">
+                    </div>
+                    <div>
+                      <label for="">Additional Instructions</label>
+                      <input name="additional_instructions" type="text" required v-model="withdrawalInfo.additional_instructions">
+                    </div>
+                    <div>
+                      <label for="">Amount</label>
+                      <input name="amount" type="number" name="" required v-model="withdrawalInfo.amount" id="">
+                    </div>
+                    <div>
+                      <button class="with" type="submit">Withdraw</button>
+                    </div>
+                    </div>
+                    
+              
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                      
+                  </form>
+                  
+              </div>
+          </div>
+        </div>
+        <!-- <div class="action">
+            <div class="action-great">
+                <img src="verifynow.svg" alt="">
+                <h4>Hi Investor, great to see you here!</h4>
+                <p>Once you're ready, please verify your account.</p>
+                <button>Verify now</button>
+            </div>
+            <div class="action-eye">
+                <h6>Watchlist</h6>
+                <div class="action-eye-center">
+                    <img src="list.svg" alt="">
+                    <p>Keep an eye on assets by tapping a heart icon wherever you see it or start here.</p>
+                    <button>Get Started</button>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

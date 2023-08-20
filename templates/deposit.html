@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit</title>
+    <link rel="stylesheet" href="{% static 'css/deposit.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="con">
+        <nav class="navbar fixed-top con navbar-expand-lg ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'core:dashboard' %}"><img src="{% static 'img/pay.jpeg' %}" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="{% static 'img/menu.png' %}" alt="toggler">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:dashboard' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:portfolio' %}">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:assets' %}">Assets</a>
+                    </li>
+                    
+                </ul>
+                <a href="{% url 'core:deposit' %}"><button class="log">Deposit</button></a>
+                <form action="{% url 'account:logout' %}" class="d-flex button-group" role="search">
+                    <button type="submit" class="logout">Logout</button>
+                    <img src="{% static 'img/grey.svg' %}" alt="">
+                </form>
+               
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="dash">
+        <div style="height:2rem">
+
+        </div>
+        <div class="deposit">
+          <h3>Deposit</h3>
+          <button class="bank">Crypto</button>
+          <div class="cryptowallet" v-if="showCrypto" >
+                {% for c in cryptos %}
+              <div class="crypto1">
+                  <p>{{c.wallet_name}}</p>
+                  <p id="myText">{{c.wallet_address}}</p>
+                  <button onclick="copyContent()">Copy Address</button>
+              </div>
+              {% endfor %}
+          </div>
+
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+        let text = document.getElementById('myText').innerHTML;
+        const copyContent = async () => {
+            try {
+            await navigator.clipboard.writeText(text);
+            console.log('Content copied to clipboard');
+            } catch (err) {
+            console.error('Failed to copy: ', err);
+            }
+  }
+    </script>
+</body>
+</html>

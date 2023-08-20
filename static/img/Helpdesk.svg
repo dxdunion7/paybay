@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 65 65">
+  <g id="Group_1785" data-name="Group 1785" transform="translate(-230 -7328)">
+    <g id="Group_1780" data-name="Group 1780" transform="translate(-10)">
+      <rect id="Rectangle_Copy_5" data-name="Rectangle Copy 5" width="65" height="65" rx="9" transform="translate(240 7328)" fill="#f5f5f5"/>
+      <g id="Group_1034" data-name="Group 1034" transform="translate(258 7341)">
+        <path id="Path_783" data-name="Path 783" d="M-260.562,156.606a15.782,15.782,0,0,1-11.467-11.233,15.664,15.664,0,0,1,1.575-11.964,15.663,15.663,0,0,1,9.573-7.346,15.664,15.664,0,0,1,11.964,1.575,15.662,15.662,0,0,1,7.346,9.573,15.663,15.663,0,0,1-1.575,11.963,15.665,15.665,0,0,1-9.573,7.346l-.777-2.9a12.685,12.685,0,0,0,7.752-5.948,12.683,12.683,0,0,0,1.275-9.687,12.681,12.681,0,0,0-5.948-7.752,12.684,12.684,0,0,0-9.687-1.275,12.682,12.682,0,0,0-7.751,5.948,12.683,12.683,0,0,0-1.276,9.687,12.782,12.782,0,0,0,9.288,9.1Z" transform="translate(271.07 -127.023)"/>
+        <path id="Line_159" data-name="Line 159" d="M8.864,1.5H0v-3H8.864Z" transform="translate(9.948 33.493)"/>
+        <path id="Line_163" data-name="Line 163" d="M7.109,1.5H0v-3H7.109Z" transform="translate(10.825 38.493)"/>
+        <path id="Line_162" data-name="Line 162" d="M1.5,12.016h-3V0h3Z" transform="translate(14.38 17.419)"/>
+      </g>
+    </g>
+  </g>
+</svg>

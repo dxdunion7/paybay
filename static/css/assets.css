@@ -1,0 +1,761 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dash{
+    background: rgb(26, 26, 34);
+    height: 88.5vh;
+    margin-top: 2.5rem;
+}
+.movers{
+    margin-left: 10rem;
+    margin-right: 10rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.movers-top h4{
+    font-size: 17px;
+    font-weight: 600;
+}
+.movers-view h4{
+    text-align: right;
+    font-size: 17px;
+    color: #16a858;
+}
+.movers-card{
+    margin-top: 1rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+.movers-cards{
+    background: white;
+    padding: 2rem;
+    color: white;
+}
+.movers-cards h6{
+    margin-bottom: 0.5rem;
+    color: white;
+}
+.movers-cards p{
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.movers-cards button{
+    background: #16a858;
+    color:white;
+    border: none;
+    padding: 10px;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+.mover-hr{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.two-factor{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background: white;
+    border-radius: 9px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.two-factor-text h4{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.two-factor-button button{
+    background: white;
+    border: 2px solid #16a858;
+    padding: 5px 20px;
+    color: black;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+.action{
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    column-gap: 2rem;
+    
+}
+.action h2, .action h4{
+    color: #16a858 !important;
+}
+.action-great{
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 9px;
+}
+.action-great h4{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.action-great p{
+    margin-bottom: 1rem;
+}
+.action-great button{
+margin-bottom: 1rem;
+background: #16a858;
+color: black;
+padding: 0.5rem;
+width: 100%;
+border: none;
+border-radius: 5px;
+margin-top: 1rem;
+}
+.action-eye{
+    background: white;
+    padding: 1rem;
+    border-radius: 9px;
+    text-align: center;
+}
+.action-eye-center{
+    text-align: center;
+}
+.action-eye-center p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.action-eye-center button{
+    margin-bottom: 1rem;
+background: white;
+color: black;
+padding: 0.5rem;
+width: 100%;
+border: 2px solid #16a858;
+border-radius: 5px;
+
+}
+.crypto{
+    margin: 5rem 10rem;
+    background: white;
+}
+.crypto h2{
+    color: #16a858;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+table{
+    background:white;
+
+}
+.buy{
+    background: #16a858;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+.sell{
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.dash-leftsidebar{
+    width:18%;
+    background: white;
+    height: 100vh;
+    position: fixed;
+    border-radius: 5px;
+    padding: 1rem;
+}
+.dash-leftsidebar-header{
+    background: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: 5px;
+    
+}
+.dash-leftsidebar-header-img img{
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+}
+
+.dash-leftsidebar-general{
+    margin-top: 1rem;
+}
+.dash-leftsidebar-general p{
+    font-weight: 600;
+}
+.dash-leftsidebar-general-menu{
+    margin-top: 1rem;
+}
+.dash-leftsidebar-general-menu .icon{
+    margin-right: 0.5rem;
+}
+.dash-leftsidebar-general-menu p{
+    margin-bottom: 1rem;
+}
+.dash-leftsidebar-general-menu p:hover{
+    background: rgb(26, 26, 34);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.dash-center{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    position: fixed;
+}
+.dash-rightsidebar{
+    width: 18%;
+    background: white;
+    height: 100vh;
+    position: fixed;
+    margin-left: 82%;
+    border-radius: 5px;
+    
+}
+.dash-rightsidebar-header{
+    padding: 1rem;
+}
+.dash-rightsidebar-header-img{
+    text-align: center;
+} 
+.dash-rightsidebar-header-img img{
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    padding: 3px;
+    border: 2px solid #f5f5f5;
+}
+.dash-rightsidebar-header-text{
+    text-align: center;
+}
+.dash-rightsidebar-header-text p{
+    font-size: 12px;
+    color: #918f8f;
+    margin-top: 0.5rem;
+}
+.dash-rightsidebar-header-text h3{
+    margin-top: 0.5rem;
+}
+.dash-rightsidebar-buy{
+    padding: 1rem;
+}
+.dash-rightsidebar-buy-button button{
+    background: rgb(26, 26, 34);
+    color: white;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+.dash-rightsidebar-buy-text p{
+    color: rgb(26, 26, 34);
+    font-weight: 600;
+}
+.dash-rightsidebar-buy-proceed button{
+    display: block;
+    width: 100%;
+    background:rgb(26, 26, 34) ;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+.navbar{
+    background: white;
+}
+.con{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding: 20px 0;
+    
+}
+.d-flex{
+    margin-left: auto;
+}
+.navbar-brand img{
+    width: 136px;
+}
+.navbar-toggler img{
+    width: 1.5rem;
+    margin-top: -10px;
+}
+.nav-link{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+.nav-link:hover{
+    border-bottom: 2px solid #27d17f !important;
+}
+.navbar-nav{
+    margin-left: 20%;
+}
+.login{
+    background-color:#f3f3f2 ; 
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 15px;
+    border: none;
+    margin-right: 0.5rem;
+}
+.sign{
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: white;
+    background: #16a858;
+    border: 1px solid #16a858;
+}
+.logout{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.log{
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: #16a858;
+    background: white;
+    border: 1px solid #16a858;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.navbar-toggler{
+    background: #16a858;
+    padding: 7px 10px;
+}
+.search{
+    display: none;
+}
+.button-group p{
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+}
+
+
+
+
+@media(max-width:567px){
+    .con{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.dash{
+    background: rgb(26, 26, 34);
+    height: auto;
+    margin-top: 2.5rem;
+}
+    .movers{
+    margin-left: 0px;
+    margin-right: 0px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.movers-card{
+    margin-top: 1rem;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+.two-factor{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    border-radius: 9px;
+    padding: 1rem;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+.action{
+    margin-top: 2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+.crypto{
+    margin: 5rem 10px;
+    background: white;
+}
+.dash-leftsidebar{
+    width:100%;
+    background: white;
+    height: auto;
+    position: static;
+    border-radius: 0px;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.dash-leftsidebar-header{
+    background: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: 5px;
+    
+}
+.dash-center{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: static;
+}
+.dash-rightsidebar{
+    width: 100%;
+    background: white;
+    height: auto;
+    position: static;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+    margin-top: 1rem;
+}
+.dash-rightsidebar-header{
+    padding: 10px;
+}
+
+.navbar-nav{
+    margin-left: 0%;
+    margin-top: 1.5rem;
+}
+.nav-link{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+}
+.search{
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #f3f3f2;
+    padding: 10px 15px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login{
+    background-color:#f3f3f2 ; 
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12px 15px;
+    border: none;
+    margin-right: 0.5rem;
+    width: 50%;
+}
+.sign{
+    background-color: #27d17f;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12px 15px;
+    border: none;
+    width: 50%;
+}
+.button-group button{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.log{
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: #16a858;
+    background: white;
+    border: 1px solid #16a858;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+.d-flex{
+    display: block !important;
+    text-align: center !important;
+}
+.button-group button{
+    width: 100%;
+    margin-top: 1rem;
+    
+}
+.logout{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+}
+
+@media(min-width: 577px) and (max-width:768px){
+    .con{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.navbar-nav{
+    margin-left: 0%;
+    margin-top: 1.5rem;
+}
+.nav-link{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+}
+.search{
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #f3f3f2;
+    padding: 10px 15px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+.dash{
+    background: rgb(26, 26, 34);
+    height: auto;
+    margin-top: 2.5rem;
+}
+    .movers{
+    margin-left: 10px;
+    margin-right: 10px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.movers-card{
+    margin-top: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 1rem;
+}
+.two-factor{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    border-radius: 9px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.action{
+    margin-top: 2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+}
+.crypto{
+    margin: 5rem 10px;
+    background: white;
+}
+.dash-leftsidebar{
+    width:100%;
+    background: white;
+    height: auto;
+    position: static;
+    border-radius: 0px;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.dash-leftsidebar-header{
+    background: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: 5px;
+    
+}
+.dash-center{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: static;
+}
+.dash-rightsidebar{
+    width: 100%;
+    background: white;
+    height: auto;
+    position: static;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+    margin-top: 1rem;
+}
+.dash-rightsidebar-header{
+    padding: 10px;
+}
+
+.login{
+    background-color:#f3f3f2 ; 
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12px 15px;
+    border: none;
+    margin-right: 0.5rem;
+    width: 50%;
+}
+.sign{
+    background-color: #27d17f;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12px 15px;
+    border: none;
+    width: 50%;
+}
+.d-flex{
+    display: block !important;
+    text-align: center !important;
+}
+.button-group button{
+    width: 100%;
+    margin-top: 1rem;
+    
+}
+.log{
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: #16a858;
+    background: white;
+    border: 1px solid #16a858;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+.logout{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+}
+
+
+@media(min-width: 769px) and (max-width:1200px){
+    .con{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.navbar-nav{
+    margin-left: 15%;
+}
+.dash{
+    background: rgb(26, 26, 34);
+    height: auto;
+    margin-top: 2.5rem;
+}
+    .movers{
+    margin-left: 10px;
+    margin-right: 10px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.movers-card{
+    margin-top: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 1rem;
+}
+.two-factor{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    border-radius: 9px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.action{
+    margin-top: 2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+}
+.crypto{
+    margin: 5rem 10px;
+    background: white;
+}
+.dash-leftsidebar{
+    width:100%;
+    background: white;
+    height: auto;
+    position: static;
+    border-radius: 0px;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.dash-leftsidebar-header{
+    background: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: 5px;
+    
+}
+.dash-center{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: static;
+}
+.dash-rightsidebar{
+    width: 100%;
+    background: white;
+    height: auto;
+    position: static;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px;
+    margin-top: 1rem;
+}
+.dash-rightsidebar-header{
+    padding: 10px;
+}
+
+}

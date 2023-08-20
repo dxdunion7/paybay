@@ -14,9 +14,6 @@ Django==3.2.19
 django-cors-headers==3.14.0
 django-filter==22.1
 django-heroku==0.3.1
-django-rest-knox==4.2.0
-djangorestframework==3.14.0
-drf-yasg==1.21.5
 dynaconf==3.1.11
 gunicorn==20.1.0
 hvac==1.0.2
@@ -26,7 +23,6 @@ inflection==0.5.1
 itypes==1.2.0
 Jinja2==3.1.2
 jmespath==1.0.1
-knox==0.1.14
 loguru==0.6.0
 Markdown==3.4.1
 MarkupSafe==2.1.2

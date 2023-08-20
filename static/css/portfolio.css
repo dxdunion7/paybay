@@ -1,0 +1,633 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background: white;
+}
+.con{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding: 20px 0;
+    
+}
+.navbar-brand img{
+    width: 136px;
+}
+.navbar-toggler img{
+    width: 1.5rem;
+    margin-top: -10px;
+}
+.d-flex{
+    margin-left: auto;
+}
+.dash{
+    background: #f5f5f5;
+    height: 120vh;
+    margin-top: 2.5rem;
+}
+.movers{
+    margin-left: 10rem;
+    margin-right: 10rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.movers-top h4{
+    font-size: 17px;
+    font-weight: 600;
+}
+.movers-view h4{
+    text-align: right;
+    font-size: 17px;
+    color: #16a858;
+}
+.movers-card{
+    margin-top: 1rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 1rem;
+}
+.movers-cards img{
+    width: 100%;
+}
+.mover-hr{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.two-factor{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    background: white;
+    border-radius: 9px;
+    padding: 1rem;
+  
+}
+.two-factor-text h4{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 50px;
+}
+.two-factor-button button{
+    background: white;
+    border: 2px solid #16a858;
+    padding: 5px 20px;
+    color: black;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+.action{
+    margin-top: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    column-gap: 2rem;
+}
+.action-great{
+    background: white;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 9px;
+}
+.action-great h4{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.action-great p{
+    margin-bottom: 1rem;
+}
+.action-great button{
+margin-bottom: 1rem;
+background: #16a858;
+color: black;
+padding: 0.5rem;
+width: 100%;
+border: none;
+border-radius: 5px;
+margin-top: 1rem;
+}
+.action-eye{
+    background: white;
+    padding: 1rem;
+    border-radius: 9px;
+}
+.action-eye-center{
+    text-align: center;
+}
+.action-eye-center p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.action-eye-center button{
+    margin-bottom: 1rem;
+background: white;
+color: black;
+padding: 0.5rem;
+width: 100%;
+border: 2px solid #16a858;
+border-radius: 5px;
+}
+.two-factor-text .with{
+  background: #16a858;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+.two-factor-text .cancel{
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+}
+.withdraw{
+  margin-top: 1rem;
+}
+.withdraw input{
+  border: 1px solid initial;
+  background: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+}
+.withdraw button{
+  background: #16a858;
+  color: white;
+  border: none;
+  padding: 7px 25px;
+  border-radius: 5px;
+  margin-top: 1.4rem;
+  width: 100%;
+}
+.withdraw-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 2rem;
+}
+.nav-link{
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 1rem;
+    text-decoration: none;
+}
+.nav-link:hover{
+    border-bottom: 2px solid #27d17f !important;
+}
+.navbar-nav{
+    margin-left: 20%;
+}
+.login{
+    background-color:#f3f3f2 ; 
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 5px 15px;
+    border: none;
+    margin-right: 0.5rem;
+}
+.sign{
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: white;
+    background: #16a858;
+    border: 1px solid #16a858;
+}
+.logout{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.log{
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: #16a858;
+    background: white;
+    border: 1px solid #16a858;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.navbar-toggler{
+    background: #16a858;
+    padding: 7px 10px;
+}
+.search{
+    display: none;
+}
+.button-group p{
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    margin-right: 1rem;
+    margin-top: 0.2rem;
+}
+
+
+
+
+@media(max-width:567px){
+    .con{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.dash{
+    background: #f5f5f5;
+    min-height: 100vh;
+    margin-top: 2.5rem;
+}
+    .movers{
+    margin-left: 10px;
+    margin-right: 10px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.movers-card{
+    margin-top: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+.two-factor{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    border-radius: 9px;
+    padding: 1rem;
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+.action{
+    margin-top: 2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+.withdraw input{
+  border: 1px solid initial;
+  background: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+.withdraw button{
+  background: #16a858;
+  color: white;
+  border: none;
+  padding: 7px 25px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 1rem;
+}
+.two-factor-text .with{
+  background: #16a858;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  width: 100%;
+}
+.two-factor-text .cancel{
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  width: 100%;
+}
+.withdraw button{
+  background: #16a858;
+  color: white;
+  border: none;
+  padding: 7px 25px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  width: 100%;
+}
+.withdraw-cards{
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 2rem;
+}
+.navbar-nav{
+    margin-left: 0%;
+    margin-top: 1.5rem;
+}
+.nav-link{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+}
+.search{
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #f3f3f2;
+    padding: 10px 15px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login{
+    background-color:#f3f3f2 ; 
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12px 15px;
+    border: none;
+    margin-right: 0.5rem;
+    width: 50%;
+}
+.sign{
+    background-color: #27d17f;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12px 15px;
+    border: none;
+    width: 50%;
+}
+.button-group button{
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.log{
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: #16a858;
+    background: white;
+    border: 1px solid #16a858;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+.d-flex{
+    display: block !important;
+    text-align: center !important;
+}
+.button-group button{
+    width: 100%;
+    margin-top: 1rem;
+    
+}
+.logout{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+}
+
+@media(min-width: 577px) and (max-width:768px){
+    .con{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.dash{
+    background: #f5f5f5;
+    height: 100vh;
+    margin-top: 2.5rem;
+}
+    .movers{
+    margin-left: 10px;
+    margin-right: 10px;
+   display: grid;
+   grid-template-columns: 1fr;
+}
+.movers-card{
+    margin-top: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 1rem;
+}
+.two-factor{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    border-radius: 9px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+.action{
+    margin-top: 2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+}
+.withdraw input{
+  border: 1px solid initial;
+  background: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+.withdraw button{
+  background: #16a858;
+  color: white;
+  border: none;
+  padding: 7px 25px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 1.4rem;
+}
+.two-factor-text .with{
+  background: #16a858;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  width: 10rem;
+}
+.two-factor-text .cancel{
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  width: 10rem;
+}
+.navbar-nav{
+    margin-left: 0%;
+    margin-top: 1.5rem;
+}
+.nav-link{
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+}
+.search{
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #f3f3f2;
+    padding: 10px 15px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login{
+    background-color:#f3f3f2 ; 
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12px 15px;
+    border: none;
+    margin-right: 0.5rem;
+    width: 50%;
+}
+.sign{
+    background-color: #27d17f;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12px 15px;
+    border: none;
+    width: 50%;
+}
+.d-flex{
+    display: block !important;
+    text-align: center !important;
+}
+.button-group button{
+    width: 100%;
+    margin-top: 1rem;
+    
+}
+.log{
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    color: #16a858;
+    background: white;
+    border: 1px solid #16a858;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+.logout{
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    padding: 5px 15px;
+    margin-left: 0rem;
+    margin-right: 0rem;
+}
+}
+
+
+@media(min-width: 769px) and (max-width:1200px){
+    .con{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.navbar-nav{
+    margin-left: 15%;
+}
+.dash{
+    background: #f5f5f5;
+    height: 100vh;
+    margin-top: 2.5rem;
+}
+    .movers{
+    margin-left: 10px;
+    margin-right: 10px;
+   display: grid;
+   grid-template-columns: 1fr;
+}
+.movers-card{
+    margin-top: 1rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 1rem;
+}
+.two-factor{
+    margin-left: 10px;
+    margin-right: 10px;
+    background: white;
+    border-radius: 9px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr ;
+}
+.action{
+    margin-top: 2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1rem;
+}
+.withdraw input{
+  border: 1px solid initial;
+  background: #f5f5f5;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+.withdraw button{
+  background: #16a858;
+  color: white;
+  border: none;
+  padding: 7px 25px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 1.4rem;
+}
+.two-factor-text .with{
+  background: #16a858;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  width: 10rem;
+}
+.two-factor-text .cancel{
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  width: 10rem;
+}
+}

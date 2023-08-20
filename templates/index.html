@@ -1,0 +1,454 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div>
+        <div class="con">
+            <nav class="navbar fixed-top con navbar-expand-lg ">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="{% static 'img/pay.jpeg' %}" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="{% static 'img/menu.png' %}" alt="toggler">
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <input class="search" placeholder="Search" type="search" name="" id="">
+                        </li>
+                        <!-- <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" @click="displayDropdown()" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Invest
+                            </a>
+                            <ul class="dropdown-menu" v-if="dropdown">
+                                <div>
+                                    <li><h6>Top selling cryptocurrencies</h6> </li>
+                                    <li><img src="bitcoin.png" alt=""> Bitcoin </li>
+                                    <li> <img src="ethereum.png" alt=""> Ethereum</li>
+                                    <li> <img src="tether.png" alt=""> Tether</li>
+                                    <li> <img src="bnb.png" alt=""> BNB</li>
+                                </div>
+                                <div>
+                                    <li><h6>Top selling stocks</h6> </li>
+                                    <li><img src="apple.png" alt=""> Apple </li>
+                                    <li> <img src="tesla.png" alt=""> Tesla</li>
+                                    <li> <img src="pay.png" alt=""> Paypal</li>
+                                    <li> <img src="twitter.png" alt=""> Twitter</li>
+                                </div>
+                                
+                            </ul>
+                        </li> -->
+                        <li class="nav-item">
+                        <a class="nav-link" href="about.html">About the Company</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link " href="#help">Help</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex button-group" role="search">
+                        <a class="login" style="text-decoration:none" href="{% url 'account:login' %}">Login</a>
+                        <a class="sign" style="text-decoration:none" href="{% url 'account:registration' %}">Signup</a>
+                    </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="header">
+          <div class="mgm" style="display: none;">
+            <div class="txt" style="color:black;">Someone from <b></b> just made an investment of <a href="javascript:void(0);" onclick="javascript:void(0);"></a></div>
+          </div>
+          <div class="header-left">
+            <h1>Invest in what you believe in </h1>
+            <a href="{% url 'account:login' %}"><button>Start Investing</button></a>
+          </div>
+          <div class="header-right">
+            <div class="header-img">
+              <img src="{% static 'img/Hero.png' %}" alt="hero-image">
+            </div>
+            <div class="header-text">
+              <div class="header-text-one">
+                <div class="header-text-img">
+                  <img src="{% static 'img/btc.svg' %}" alt="">
+                </div>
+                <div class="header-text-first">
+                  <h5>Bitcoin</h5>
+                  <p>26,143.40</p>
+                </div>
+                <div class="header-text-second">
+                  <h5>+47.00</h5>
+                  <p>595.84</p>
+                </div>
+              </div>
+              <div class="header-text-one">
+                <div class="header-text-img">
+                  <img src="{% static 'img/tsla.svg' %}" alt="">
+                </div>
+                <div class="header-text-first">
+                  <h5>Tesla</h5>
+                  <p>215.49</p>
+                </div>
+                <div class="header-text-second">
+                  <h5>−3.73</h5>
+                  <p>4.33</p>
+                </div>
+              </div>
+              <div class="header-text-one">
+                <div class="header-text-img">
+                  <img src="{% static 'img/xau.svg' %}" alt="">
+                </div>
+                <div class="header-text-first">
+                  <h5>Gold</h5>
+                  <p>1,889.50</p>
+                </div>
+                <div class="header-text-second">
+                  <h5>+0.50</h5>
+                  <p>0.72</p>
+                </div>
+              </div>
+              <div class="header-summary">
+                <p>Past performance is no indication of future performance.</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="reg">
+          <div class="reg1">
+            <img src="{% static 'img/Regulated.svg' %}" alt="">
+            <div class="reg-text">
+              <h2>Regulated</h2>
+            <p><span class="focused">MiFID II</span>  investment firm.
+            </p>
+            <p> <span class="focused">PSD2</span> payment institution.</p>
+    
+            <a href="">View licences</a>
+            </div>
+            
+          </div>
+          <div class="reg1">
+            <img src="{% static 'img/Secure.svg' %}" alt="">
+            <div class="reg-text">
+              <h2>Secure</h2>
+              <p><span class="focused">Fully compliant with</span> AML5.
+              </p>
+              <p>Funds secured in offline wallets.</p>
+    
+              <a href="">Read more</a>
+            </div>
+            
+          </div>
+          <div class="reg2">
+            <img src="{% static 'img/Trusted.svg' %}" alt="">
+            <div class="reg-text">
+              <h2>Trusted</h2>
+              <p><span class="focused"> 3.5+ million</span> happy users.
+              </p>
+              <p>Excellent Trustpilot rating.</p>
+    
+              <a href="">Read reviews.</a>
+            </div>
+            
+          </div>
+          
+        </div>
+        <hr class="invest-hr">
+        <div class="invest">
+          
+          <div class="invest-header">
+            <h4>INVEST</h4>
+            <h2>All your investments.</h2>
+            <h2>All on Pay Bay Invest.</h2>
+          </div>
+          <div class="invest-grid">
+            <div class="invest-options">
+              <h4>Cryptocurrencies</h4>
+              <p>Buy, sell and swap the cryptocurrencies you want anytime, anywhere</p>
+              <img class="crypto-img" src="{% static 'img/crypto.png' %}" alt="">
+            </div>
+            <div class="invest-options">
+              <h4>Stocks*</h4>
+              <p>Invest in fractions of your favorite companies without committing to a whole share</p>
+              <img class="crypto-img" src="{% static 'img/stocks.png' %}" alt="">
+            </div>
+            <div class="invest-options">
+              <h4>ETFs*</h4>
+              <p>Invest in fractions of your favorite ETFs* without committing to a whole share</p>
+              <img class="crypto-img" src="{% static 'img/ETFs.png' %}" alt="">
+            </div>
+            <div class="invest-options">
+              <h4>Commodities*</h4>
+              <p>Fortify your portfolio with commodities* and shield it against inflation.</p>
+              <img class="crypto-img" src="{% static 'img/Commodities.png' %}" alt="">
+            </div>
+            <div class="invest-options">
+              <h4>Crypto Indices</h4>
+              <p>Auto-invest in the whole crypto market with a single click.</p>
+              <img class="crypto-img" src="{% static 'img/indices.png' %}" alt="">
+            </div>
+            <div class="invest-options">
+              <h4>Precious Metals</h4>
+              <p>Diversify your portfolio by investing in physically-backed precious metals.</p>
+              <img class="crypto-img" src="{% static 'img/metals.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="features">
+          <div class="features-header">
+            <h4>Features</h4>
+            <h2>More than an investment platform</h2>
+          </div>
+          <div class="features-card">
+            <div class="features-text">
+              <span>
+                PAY BAY INVEST CARD
+              </span>
+              <h2>Apple Pay meets Pay Bay Invest Card</h2>
+              <p>Pay Bay Invest Card is the easy way to spend your assets anywhere you want-in-real-time. And it just got easier. Starting today, Apple Pay is available to all our Apple customers.</p>
+              <a href="">Read more</a>
+            </div>
+            <div class="features-img">
+              <img src="{% static 'img/paybay-preview.png' %}" alt="">
+            </div>
+          </div>
+          <div class="features-button">
+              <button>See all features</button>
+          </div>
+    
+        </div>
+        <div class="learn">
+          <div class="learn-header">
+            <h4>INVEST</h4>
+            <h2>Boost your passive income sources</h2>
+          </div>
+          <div class="learn-cards">
+            <div class="learn-first">
+              <!-- <span>PAY BAY INVEST BLOG</span> -->
+              <h2>Promo</h2>
+              <!-- <a href="">Visit Blog</a> -->
+              <p>Minimum Investment: $1,000</p>
+              <img src="{% static 'img/blog.png' %}" alt="">
+            </div>
+            <div class="learn-first">
+              <!-- <span>PAY BAY INVEST BLOG</span> -->
+              <h2>Silver</h2>
+              <!-- <a href="">Visit Blog</a> -->
+              <p>Minimum Investment: $2,000</p>
+              <img src="{% static 'img/blog.png' %}" alt="">
+            </div>
+            <div class="learn-second">
+              <!-- <span>PAY BAY INVEST ACADEMY</span> -->
+              <h2>Gold</h2>
+              <!-- <a href="">Visit Academy</a> -->
+              <p>Minimum Investment: $5,000</p>
+              <img src="{% static 'img/academy.png' %}" alt="">
+            </div>
+            <div class="learn-second">
+              <!-- <span>PAY BAY INVEST ACADEMY</span> -->
+              <h2>Platinum</h2>
+              <!-- <a href="">Visit Academy</a> -->
+              <p>Minimum Investment: $15,000</p>
+              <img src="{% static 'img/academy.png' %}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="reviews">
+          
+        </div>
+        <div class="reg-header" id="help">
+          <h4>HELP</h4>
+          <h2>Questions? We are here for you</h2>
+        </div>
+        <div class="reg">
+          <div class="reg1">
+            <img src="{% static 'img/Helpdesk.svg' %}" alt="">
+            <div class="reg-text">
+              <h2>Helpdesk</h2>
+            <p>Our Pay Bay Invest Helpdesk is loaded with in-depth articles to help you troubleshoot problems or learn more on your own.
+            </p>
+           
+    
+            <span>View licences</span>
+            </div>
+            
+          </div>
+          <div class="reg1">
+            <img src="{% static 'img/Community.svg' %}" alt="">
+            <div class="reg-text">
+              <h2>Community</h2>
+              <p>Join our online community so that you can be the first to hear about company news, new products and much more.
+              </p>
+              
+    
+              <span>Join us</span>
+            </div>
+            
+          </div>
+          <div class="reg2">
+            <img src="{% static 'img/us.svg' %}" alt="">
+            <div class="reg-text">
+              <h2>Contact us</h2>
+              <p>Want to get in contact with us? We are always available to lend a helping hand through our contact form - no matter the issue
+              </p>
+              
+    
+              <span data-bs-toggle="modal" data-bs-target="#exampleModal">Contact us.</span>
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title fs-5" id="exampleModalLabel">Contact Us</h3>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form method="post" @submit.prevent="contact">
+                        <label for="">Name</label>
+                        <input type="text" v-model="contactForm.name">
+                        <label for="">Email</label>
+                        <input type="text" v-model="contactForm.email">
+                        <label for="">Query</label>
+                        <textarea name="" id=""  v-model="contactForm.query"></textarea>
+                        <button type="submit">Submit</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div class="disclaimer">
+          <p>*Pay Bay Invest Stocks enables investing in fractional stocks. Fractional stocks in Europe are always enabled via a contract which replicates the underlying stock or ETF (financial instruments pursuant to section 1 item 7 lit. d WAG 2018). Investing in stocks and ETFs carries risks. For more details see the prospectus at paybayinvest.com.</p>
+        </div>
+    
+        <div class="counter">
+          <div>
+            <h2 class="scroll-counter" data-counter-time="2500">5000</h2>
+            <h2>Withdrawals</h2>
+          </div>
+          <div>
+            <h2 class="scroll-counter" data-counter-time="5000">1000</h2>
+            <h2>Investors</h2>
+          </div>
+          <div >
+            <h2 class="scroll-counter" data-counter-time="5000">700</h2>
+            <h2>Satisfied Clients</h2>
+          </div>
+        </div>
+        <div class="featured">
+          <hr>
+          <div class="featured-img">
+            <p>Featured in</p>
+            <img src="{% static 'img/Forbes.svg' %}" alt="">
+            <img src="{% static 'img/Bloomberg.svg' %}" alt="">
+            <img src="{% static 'img/TC.svg' %}" alt="">
+            <img src="{% static 'img/CNBC.svg' %}" alt="">
+            <img src="{% static 'img/busy.svg' %}" alt="">
+          </div>
+          <hr>
+        </div>
+        <div class="footer">
+            <div class="logo">
+                <img src="{% static 'img/pay.jpeg' %}" alt="" style="margin-top: 1rem;">
+            </div>
+            <div class="footer-grid">
+                <div class="footer-grid-one">
+                    <h3>Invest</h3>
+                    <p>Cryptocurrencies</p>
+                    <p>Crypto Indices</p>
+                    <p>Stocks*</p>
+                    <p>ETFs</p>
+                    <p>Metals</p>
+                    <p>Commodities</p>
+                </div>
+                <div class="footer-grid-one">
+                    <h3>Earn</h3>
+                    <p>Staking</p>
+                    <p>BEST</p>
+                    <p>Tell-a-Friend</p>
+                    <p>Affiliate programme</p>
+                    <p>Ambassador programme</p>
+                </div>
+                <div class="footer-grid-one">
+                    <h3>Learn</h3>
+                    <p>Academy</p>
+                    <p>Maker and taker fees</p>
+                    <p>6 questions about Bitcoin</p>
+                    <p>Buy my first digital assets</p>
+                    <p>What are NFTs</p>
+                </div>
+                <div class="footer-grid-one">
+                    <h3>Features</h3>
+                    <p>Payments</p>
+                    <p>Savings plan</p>
+                    <p>Swap</p>
+                    <p>Plus</p>
+                </div>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-grid-one">
+                    <h3>Products</h3>
+                    <p>Card</p>
+                    <p>Pay Bay Invest To Go</p>
+                    <p>BEST</p>
+                    <p>Pantos</p>
+                    <p>App</p>
+                    <p>Pay Bay Invest Custody</p>
+                </div>
+                <div class="footer-grid-one">
+                    <h3>Pay Bay Invest Pro</h3>
+                    <p>Home</p>
+                    <p>Markets</p>
+                    <p>Fees</p>
+                    <p>Pro API</p>
+                    <p>Institutions & Partners</p>
+                </div>
+                <div class="footer-grid-one">
+                    <h3>White Label</h3>
+                    <p>Home</p>
+                    <p>How it works</p>
+                    <p>Asset offering</p>
+                    <p>Use cases</p>
+                    
+                </div>
+                <div class="footer-grid-one">
+                    <h3>Get the app</h3>
+                </div>
+            </div>
+            <div class="footer-closer">
+                 <span>Privacy policy</span> <span>Terms & Conditions</span>
+                <span>Email us @ contact@paybay-invest.com</span> 
+                <div class="bitpanda">
+                   <span>&#169; 2022 Pay Bay Invest</span> 
+                </div>
+                
+            </div>
+          </div>
+          <script type="text/javascript">
+    (function(w,d,v3){
+    w.chaportConfig = {
+      appId : '63869a3be6435e45b92bc197'
+    };
+    
+    if(w.chaport)return;v3=w.chaport={};v3._q=[];v3._l={};v3.q=function(){v3._q.push(arguments)};v3.on=function(e,fn){if(!v3._l[e])v3._l[e]=[];v3._l[e].push(fn)};var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://app.chaport.com/javascripts/insert.js';var ss=d.getElementsByTagName('script')[0];ss.parentNode.insertBefore(s,ss)})(window, document);
+    </script>
+          <a  class="whatsapp_float" target="_blank" rel="noopener noreferrer" href="https://wa.me/+18484660886"><font-awesome-icon class="whatsapp-icon" :icon="['fab', 'whatsapp']" /></a> 
+       
+        
+      </div>    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
