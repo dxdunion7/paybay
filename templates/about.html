@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
 </head>
 <body>
     <div class="con">
         <nav class="navbar fixed-top con navbar-expand-lg ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img src="./static/pay.jpeg" alt="logo"></a>
+                <a class="navbar-brand" href="/"><img src="{% static 'img/pay.jpeg' %}" alt="logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="./static/menu.png" alt="toggler">
+                <img src="{% static 'img/menu.png' %}" alt="toggler">
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
@@ -42,16 +43,16 @@
                             
                         </ul>
                     </li> -->
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                     <a class="nav-link" href="about">Company</a>
-                    </li>
-                    <li class="nav-item">
+                    </li> -->
+                    <!-- <li class="nav-item">
                     <a class="nav-link " href="#help">Help</a>
-                    </li>
+                    </li> -->
                 </ul>
                 <form class="d-flex button-group" role="search">
-                    <a href="login.html"><button class="login">Login</button></a>
-                    <a href="signup.html"><button class="sign">Signup</button></a>
+                    <a class="login" style="text-decoration:none" href="{% url 'account:login' %}">Login</a>
+                    <a class="sign" style="text-decoration:none" href="{% url 'account:registration' %}">Signup</a>
                 </form>
                 </div>
             </div>
@@ -66,23 +67,23 @@
             <p>So, we're building a platform without digital walls and complex barriers. A platform that empowers you to see new possibilities for your money - and helps make them a reality.</p>
         </div>
         <div class="us-img">
-            <img src="./static/mavin.jpg" alt="">
+            <img src="{% static 'img/mavin.jpg' %}" alt="">
         </div>
     </div>
     <hr>
     <div class="leads">
         <div class="lead-img">
-            <img src="./static/lead1.jpg" alt=""> 
+            <img src="{% static 'img/lead1.jpg' %}" alt=""> 
             <p>Christian Bentley</p>
             <p>CEO</p>
         </div>
         <div class="lead-img">
-            <img src="./static/lead3.jpg" alt="">
+            <img src="{% static 'img/lead3.jpg' %}" alt="">
             <p>Precious Fredrich</p>
             <p>CTO</p>
         </div>
         <div class="lead-img">
-            <img src="./static/lead2.jpg" alt=""> 
+            <img src="{% static 'img/lead2.jpg' %}" alt=""> 
             <p>Morgan Freeman</p>
             <p>HR</p>
         </div>
@@ -121,32 +122,32 @@
         <p>Our user-friendly, trade-everything platform empowers you to invest in the stocks, crptocurrencies and metals you want, with any amount of money.</p>
         <div class="do-cards">
             <div>
-                <p><img src="./static/bullet.svg" alt=""> Buy, sell or swap 2000+ digital assets like crypto, stocks, precious metals, ETFs and crypto indices.</p>
+                <p><img src="{% static 'img/bullet.svg' %}" alt=""> Buy, sell or swap 2000+ digital assets like crypto, stocks, precious metals, ETFs and crypto indices.</p>
             </div>
             <div>
-                <p><img src="./static/bullet.svg" alt=""> Automate regular investments with savings plans.</p>
+                <p><img src="{% static 'img/bullet.svg' %}" alt=""> Automate regular investments with savings plans.</p>
             </div>
             <div>
-                <p><img src="./static/bullet.svg" alt=""> Invest in any asset on Pay Bay Invest from $1</p>
+                <p><img src="{% static 'img/bullet.svg' %}" alt=""> Invest in any asset on Pay Bay Invest from $1</p>
             </div>
             <div>
-                <p><img src="./static/bullet.svg" alt=""> Wide range of payment and payout providers.</p>
+                <p><img src="{% static 'img/bullet.svg' %}" alt=""> Wide range of payment and payout providers.</p>
             </div>
             <div>
-                <p><img src="./static/bullet.svg" alt=""> Use EUR, CHF, GBP, USD, PLN, DKK, SEK, HUF, CZK or TRY to pay or cash out.</p>
+                <p><img src="{% static 'img/bullet.svg' %}" alt=""> Use EUR, CHF, GBP, USD, PLN, DKK, SEK, HUF, CZK or TRY to pay or cash out.</p>
             </div>
             <div>
-                <p><img src="./static/bullet.svg" alt=""> We are fully licenced.</p>
+                <p><img src="{% static 'img/bullet.svg' %}" alt=""> We are fully licenced.</p>
             </div>
         </div>
         <div class="do-button">
-            <a href="signup.html"><button>Start Investing</button></a>
+            <a href="{% url 'account:login' %}"><button>Start Investing</button></a>
         </div>
     </div>
     <hr>
     <div class="footer">
         <div class="logo">
-            <img src="./static/pay.jpeg" alt="" style="margin-top: 1rem;">
+            <img src="{% static 'img/pay.jpeg' %}" alt="" style="margin-top: 1rem;">
         </div>
         <div class="footer-grid">
             <div class="footer-grid-one">
